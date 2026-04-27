@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web App</title>
+    <title>DevOps Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Updated DevOps Lab Project</h1>
-        <p>CI/CD Pipeline Visualization</p>
-        <div id="status">Status: Deployment Successful!</div>
-        <br>
-        <button onclick="changeColor()">Test Functionality</button>
+    <div class="glass-card">
+        <h1>DevOps Pipeline Test</h1>
+        <p>Enter details to verify CI/CD automation</p>
+        
+        <form id="testForm" onsubmit="handleForm(event)">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="User Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <button type="submit" id="submitBtn">Run Test</button>
+        </form>
+
+        <div id="status">Status: Waiting for input...</div>
     </div>
     <script src="script.js"></script>
 </body>
